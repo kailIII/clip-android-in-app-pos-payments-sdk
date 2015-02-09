@@ -1,2 +1,0 @@
-configurations.create("default")
-artifacts.add("default", file('PayclipCommonLibrary-1.0.aar'))

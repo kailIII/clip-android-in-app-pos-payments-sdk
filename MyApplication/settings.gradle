@@ -1,1 +1,0 @@
-include ':app', ':libraries', ':clipcorepayments-1.0', ':clipposlibrary-1.0', ':PayclipCommonLibrary-1.0'
