@@ -112,6 +112,9 @@ public class KeyEnteredExampleActivity extends Activity implements ManualEntryMa
     @Override
     public void onPaymentDeclined() {
         Log.d("Clip", "Payment declined");
+        EditText amountField = (EditText)findViewById(R.id.amount_field);
+        amountField.setText("");
+        PaymentManager.getInstance().clearTransactionalData();
         ClipDialog.hideDialog();
     }
     @Override
@@ -126,10 +129,16 @@ public class KeyEnteredExampleActivity extends Activity implements ManualEntryMa
     @Override
     public void sendSignatureSuccess() {
         ClipDialog.showDialogForDuration(this, "Signature Sent");
+        EditText amountField = (EditText)findViewById(R.id.amount_field);
+        amountField.setText("");
+        PaymentManager.getInstance().clearTransactionalData();
     }
 
     @Override
     public void sendSignatureFailed(RetrofitError error) {
         Log.d("Clip", "Signature send failed");
+        EditText amountField = (EditText)findViewById(R.id.amount_field);
+        amountField.setText("");
+        PaymentManager.getInstance().clearTransactionalData();
     }
 }
