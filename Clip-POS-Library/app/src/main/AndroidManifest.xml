@@ -13,6 +13,11 @@
         <activity
             android:name=".KeyEnteredExampleActivity"
             android:label="@string/title_activity_key_entered_example" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".SwipeExampleActivity"
@@ -21,11 +26,6 @@
         <activity
             android:name=".EMVExampleActivity"
             android:label="@string/title_activity_emvexample" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

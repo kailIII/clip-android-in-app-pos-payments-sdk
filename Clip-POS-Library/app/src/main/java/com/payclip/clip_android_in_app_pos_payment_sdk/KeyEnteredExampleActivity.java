@@ -32,6 +32,8 @@ public class KeyEnteredExampleActivity extends Activity implements ManualEntryMa
         // The following lines are required. The payment and manual entry managers will fail if your activity does not become a listener
         CCPAPIClient.getInstance().authToken = "fJbkv0ipMUi1tPxbzT4AmCpikwzlKt9X2dO2e8Us0U8";
         PaymentManager.getInstance().setPaymentListener(this);
+        // This method sets the API endpoint, it defaults to debug if the method is not called.
+        PaymentManager.getInstance().setAPIEndpoint(CCPAPIClient.PCAPIEndpoint.STAGING);
         ManualEntryManager.getInstance(this).setKeyEnteredListener(this);
         PaymentManager.getInstance().setSignatureListener(this);
     }
