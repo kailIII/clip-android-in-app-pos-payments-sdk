@@ -13,15 +13,15 @@
         <activity
             android:name=".KeyEnteredExampleActivity"
             android:label="@string/title_activity_key_entered_example" >
+        </activity>
+        <activity
+            android:name=".SwipeExampleActivity"
+            android:label="@string/title_activity_swipe_example" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".SwipeExampleActivity"
-            android:label="@string/title_activity_swipe_example" >
         </activity>
         <activity
             android:name=".EMVExampleActivity"
